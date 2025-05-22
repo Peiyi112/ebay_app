@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/my_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#FF8C00"
+            android:orientation="horizontal"
+            android:id="@+id/total">
+
+            <TextView
+                android:id="@+id/itemtotal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="start" />
+
+            <TextView
+                android:id="@+id/costotal"
+                android:layout_width="0dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/noone"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="No items in Wishlist"
+        android:textSize="15sp"
+        android:background="@drawable/round"
+        android:layout_gravity="center" />
+</FrameLayout>

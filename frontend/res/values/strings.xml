@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string-array name="categoryoptions">
+        <item>All</item>
+        <item>Art</item>
+        <item>Baby</item>
+        <item>Books</item>
+        <item>Clothing,Shoes and Accessories</item>
+        <item>Computer, Tablets and Network</item>
+        <item>Health and Beauty</item>
+        <item>Music</item>
+        <item>Video, Games and Consoles</item>
+    </string-array>
+    <string-array name="Sortby">
+        <item>Default</item>
+        <item>Name</item>
+        <item>Price</item>
+        <item>Days</item>
+    </string-array>
+    <string-array name="ad">
+        <item>Ascending</item>
+        <item>Descending</item>
+    </string-array>
+    <string name="title_activity_detail">detail</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+</resources>

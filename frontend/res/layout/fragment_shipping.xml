@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    tools:context=".ShippingFragment">
+        <!--sold by title-->
+        <LinearLayout
+            android:layout_marginTop="25sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/truck"
+                />
+            <TextView
+                android:layout_marginLeft="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="Sold By"/>
+        </LinearLayout>
+        <!---store name-->
+        <LinearLayout
+            android:id="@+id/storenamerow"
+            android:layout_marginTop="5sp"
+            android:paddingLeft="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="Store Name"/>
+            <TextView
+                android:id="@+id/storename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:gravity="start"
+                android:textSize="18sp"
+                android:textColor="@color/tab_background_color"
+             />
+        </LinearLayout>
+        <!---score-->
+        <LinearLayout
+            android:id="@+id/scorerow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:paddingLeft="20sp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="200sp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:text="Feedback Score"/>
+            <TextView
+                android:id="@+id/fdscore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textSize="17sp"
+                android:textColor="#808080" />
+        </LinearLayout>
+        <!---popula-->
+        <LinearLayout
+            android:id="@+id/populrow"
+            android:layout_marginTop="5sp"
+            android:paddingLeft="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="200sp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="Popularity"/>
+            <FrameLayout
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:gravity="center">
+            <TextView
+                android:id="@+id/popularity"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/circle_border"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textColor="#808080" />
+            </FrameLayout>
+
+        </LinearLayout>
+        <!---feedback star-->
+        <LinearLayout
+            android:id="@+id/fbstarrow"
+            android:layout_marginTop="5sp"
+            android:paddingLeft="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="200sp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:text="Feedback Star"/>
+            <ImageView
+                android:id="@+id/feedbacjstar"
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:gravity="start"
+                />
+        </LinearLayout>
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"/>
+
+
+    <!---Shipping title-->
+    <LinearLayout
+        android:layout_marginTop="15sp"
+        android:paddingLeft="5sp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ferry"
+           />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textStyle="bold"
+            android:layout_marginLeft="10sp"
+            android:textSize="23sp"
+            android:textColor="@color/black"
+            android:text="Shipping Info"/>
+    </LinearLayout>
+    <!---shipcost-->
+    <LinearLayout
+        android:id="@+id/shipcostrow"
+        android:layout_marginTop="5sp"
+        android:paddingLeft="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="Shipping Cost"/>
+        <TextView
+            android:id="@+id/shipcost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="18sp"
+            android:textColor="#808080" />
+    </LinearLayout>
+    <!---globalship-->
+    <LinearLayout
+        android:id="@+id/globalrow"
+        android:layout_marginTop="5sp"
+        android:paddingLeft="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="Global Shipping"/>
+        <TextView
+            android:id="@+id/gloship"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="18sp"
+            android:textColor="#808080" />
+    </LinearLayout>
+    <!---handletime-->
+    <LinearLayout
+        android:id="@+id/handlerow"
+        android:layout_marginTop="5sp"
+        android:paddingLeft="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="Handling Time"/>
+        <TextView
+            android:id="@+id/handletime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="18sp"
+            android:textColor="#808080" />
+    </LinearLayout>
+    <!---condition description-->
+    <LinearLayout
+        android:id="@+id/conditionrow"
+        android:layout_marginTop="5sp"
+        android:paddingLeft="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="Condition"/>
+        <TextView
+            android:id="@+id/condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="18sp"
+            android:textColor="#808080" />
+    </LinearLayout>
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"/>
+
+    <!---Returns title-->
+    <LinearLayout
+
+        android:paddingLeft="5sp"
+        android:layout_marginTop="25sp"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dump_truck"
+           />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Return Policy"/>
+    </LinearLayout>
+    <!---policy-->
+    <LinearLayout
+        android:id="@+id/policyrow"
+        android:layout_marginTop="5sp"
+        android:paddingLeft="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="Policy"/>
+        <TextView
+            android:id="@+id/policy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="18sp"
+            android:textColor="#808080" />
+    </LinearLayout>
+    <!---returns within-->
+    <LinearLayout
+        android:id="@+id/reutrnwitrow"
+        android:layout_marginTop="5sp"
+        android:paddingLeft="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="Returns Within"/>
+        <TextView
+            android:id="@+id/returnswith"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="18sp"
+            android:textColor="#808080" />
+    </LinearLayout>
+    <!---refund mode-->
+    <LinearLayout
+        android:id="@+id/refundrow"
+        android:layout_marginTop="5sp"
+        android:paddingLeft="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="Refund Mode"/>
+        <TextView
+            android:id="@+id/refundmode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="18sp"
+            android:textColor="#808080" />
+    </LinearLayout>
+    <!---shipby-->
+    <LinearLayout
+        android:id="@+id/shipbyrow"
+        android:layout_marginTop="5sp"
+        android:paddingLeft="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:text="Shipped By"/>
+        <TextView
+            android:id="@+id/shipby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textSize="18sp"
+            android:textColor="#808080" />
+    </LinearLayout>
+
+
+</LinearLayout>
+</ScrollView>

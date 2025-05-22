@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".SimilarFragment">
+        <!--two drop down-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <Spinner
+            android:id="@+id/sortby"
+            android:layout_width="200sp"
+            android:layout_height="48dp"
+            android:textSize="15sp"/>
+            <Spinner
+                android:id="@+id/ad"
+                android:layout_width="200sp"
+                android:layout_height="48dp"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <!-- 动态添加的视图将放置在这里 -->
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+</ScrollView>

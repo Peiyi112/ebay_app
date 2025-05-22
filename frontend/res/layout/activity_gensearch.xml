@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".gensearch">
+    <LinearLayout
+        android:id="@+id/noresult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="350dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="200dp"
+            android:background="@drawable/round"
+            android:textColor="@color/black"
+            android:text="No Results Found"
+            android:textSize="20dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/haveresult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:id="@+id/progressBar"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        <ProgressBar
+            android:id="@+id/Bar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="#778899"
+            android:indeterminateTintMode="src_in"
+            android:indeterminate="true" />
+        <TextView
+            android:id="@+id/BarTEXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:text="Searching Products..."
+            android:textColor="#7B68EE"
+            android:textSize="20dp"
+            />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/my_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
+</RelativeLayout>

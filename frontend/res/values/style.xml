@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BasicTheme" parent="Theme.AppCompat.Light">
+        <item name="android:windowSplashScreenBackground">#6F2DA8</item>
+
+    </style>
+</resources>
